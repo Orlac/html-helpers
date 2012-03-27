@@ -29,7 +29,7 @@ class Ielement {
     public $label;
     public $request;
     public $errors;
-    
+    public $element;
     public $fileErrors = 'validation';
     
     protected $rElement;
@@ -59,6 +59,7 @@ class Ielement {
     
     public function render( $element )
     {
+	$this->element = $element;
 	$el = '<div id="field_'.$this->name.'" class="elementForm" >';
 	$el .= $element;
 	$el .= '</div>';

@@ -9,6 +9,7 @@ require_once 'userform.php';
 require_once 'pager.php';
 require_once 'ielement.php';
 require_once 'captcha.php';
+require_once 'optiongroup.php';
 //print_r('<!--html-init-->');
 
 ?>
