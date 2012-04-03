@@ -14,11 +14,12 @@ namespace modules\html;
 class Captcha extends Ielement {
     //put your code here
     
-    public function render( $element = null )
+    public function render( $attrs, $element = null )
     {
 	$captcha = \Captcha::instance();
 	$captcha->render();
-	$element = \Form::input($this->htmlName(), $this->value, $this->attrs() );
+	$attrs = array_merge($this->attrs(), $attrs);
+	$element = \Form::input($this->htmlName(), $this->value, $attrs );
 	
 	$el = '<div id="field_'.$this->name.'" class="elementForm" >';
 	$el .= '<ul class="captcha">';
