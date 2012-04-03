@@ -78,7 +78,7 @@ class Ielement {
     
     public function showLabel(  )
     {
-	$el = '<div id="label_'.$name.'" class="labelForm" >';
+	$el = '<div id="label_'.$this->form.'_'.$this->name .'" class="labelForm" >';
 	$el .= \I18n::get($this->label);
 	$el .= '</div>';
 	return $el;

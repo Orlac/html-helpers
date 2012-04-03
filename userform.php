@@ -39,6 +39,11 @@ class Userform {
         
     }
     
+    public function removeElement( Ielement $element )
+    {
+	unset( $this->elements[ array_search($element, $this->elements ) ] );
+    }
+    
     public function getElements( )
     {
         return $this->elements;
